@@ -7,6 +7,7 @@ Students may need to research manual string reversal.
 
 def manual_palindrome(text):
     text =  text.strip().lower()
+    text = text.replace(" ", "")
     cleaned_text = ""
     i = len(text) -1
     while i >=0:
@@ -16,4 +17,4 @@ def manual_palindrome(text):
         return True
     else:
         return False
-print(manual_palindrome("level level"))
+print(manual_palindrome(" level radar level"))
