@@ -3,9 +3,12 @@ import unittest
 from exact_calculator import calculator
 
 class TestCalculator(unittest.TestCase):
-    #Test for invalide input
-    
 
+    #Test for invalide input
+    def test_convert(self):
+        expected = "Invalid Number"
+        got = calculator("ten", "+", "5")
+        self.assertEqual(expected, got)
     # Test for ZerodivisionError
     def test_zerodivision_error(self):
         p= ""
@@ -18,25 +21,20 @@ class TestCalculator(unittest.TestCase):
             self.assertEqual((2, p, 0), "Cannot divide by zero")
     # Test for addition
     def test_addition(self):
-        left = 3
-        right = 2
-        operator = "+"
-
-        self.assertEqual(calculator(left, operator, right), 5)
-
-    # Test for subtraction 
+        expected = 5
+        got = calculator("2", "+", "3")
+        self.assertEqual(expected, got)
+    # Test for subtraction
     def test_subtraction(self):
-        left = 3
-        right = 2
-        operator = "-"
-        self.assertEqual(calculator(left,operator, right), 1)
+        expected = 1
+        got = calculator("3", "-", "2")
+        self.assertEqual(expected, got)
 
     # Test for Multiplication
     def test_multiplication(self):
-        left = 3
-        right = 2
-        operator = "*"
-        self.assertEqual(calculator(left, operator, right), 6)
+        expected = 1
+        got = calculator("3", "-", "2")
+        self.assertEqual(expected, got)
     
     # Test for exponent
     def test_exponent(self):
