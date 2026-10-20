@@ -8,7 +8,7 @@ If division or remainder uses zero on the right side,
 return Cannot divide by zero. Round numeric results to 2 decimal places.
 """
 
-def exact_calculator(left, operator, right):
+def calculator(left, operator, right):
     try:
         left = int(left)
         right = int(right)
@@ -26,9 +26,9 @@ def exact_calculator(left, operator, right):
     elif operator == "-":
         return left - right
     elif operator == "*":
-        return round((left*right), 2)
+        return left*right
     elif operator == "**":
-        return round((left ** right), 2)
+        return left ** right
     else:
-        return "Invlid operator"
-print(exact_calculator("2", "%", "0"))
+        return "Invalid operator"
+print(calculator("t", "%", "0"))

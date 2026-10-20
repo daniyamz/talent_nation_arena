@@ -17,4 +17,4 @@ def manual_palindrome(text):
         return True
     else:
         return False
-print(manual_palindrome(" level radar level"))
+manual_palindrome(" level radar level")
