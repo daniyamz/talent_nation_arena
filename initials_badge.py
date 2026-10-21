@@ -5,4 +5,13 @@ The returned badge should end with a dot.
 """
 
 def initials_badge(full_name):
-    pass
+    full_name = full_name.strip()
+    new_full_name = full_name.split()
+    words = []
+    i=0
+    while i < len(new_full_name):
+        word = new_full_name[i][0].upper()
+        words.append(word)
+        i += 1
+    print(".".join(words) + ".")
+initials_badge("daniel terkimbi Terungwa")
