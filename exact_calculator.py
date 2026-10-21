@@ -13,7 +13,7 @@ def calculator(left, operator, right):
         left = int(left)
         right = int(right)
     except ValueError:
-        return "Invalid number"
+        return "Invalid Number"
     try:
         if operator == "/":
             return round((left/right), 2)
@@ -31,4 +31,4 @@ def calculator(left, operator, right):
         return left ** right
     else:
         return "Invalid operator"
-print(calculator("t", "%", "0"))
+calculator("t", "%", "0")
