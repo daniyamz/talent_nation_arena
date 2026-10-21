@@ -13,5 +13,5 @@ def initials_badge(full_name):
         word = new_full_name[i][0].upper()
         words.append(word)
         i += 1
-    print(".".join(words) + ".")
-initials_badge("daniel terkimbi Terungwa")
+    return(".".join(words) + ".")
+print(initials_badge("daniel terkimbi Terungwa"))
